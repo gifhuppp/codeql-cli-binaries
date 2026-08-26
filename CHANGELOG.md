@@ -17,6 +17,23 @@
      you know what to do).
 -->
 
+## Release 2.26.4 (2026-08-26)
+
+### New Features
+
+- `codeql test run` now supports the `--reuse-dataset` option, which
+  reuses an existing test database from a previous run when available,
+  skipping database extraction. This can speed up repeated test runs
+  when only the query under test has changed. The option implies
+  `--keep-databases`.
+
+### Bug Fixes
+
+- The Java Autobuilder now expands project properties, such as
+  `${maven.version}`, when determining Maven version requirements specified
+  by the Maven Enforcer Plugin. The Java Autobuilder now also supports Maven
+  versions through 3.9.16.
+
 ## Release 2.26.3 (2026-08-12)
 
 ### Improvements
@@ -41,6 +58,7 @@
 ## Release 2.26.1 (2026-07-15)
 
 - There are no user-facing changes in this release.
+
 ## Release 2.26.0 (2026-07-08)
 
 ### Improvements
